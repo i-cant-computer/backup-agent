@@ -1,0 +1,53 @@
+[project]
+name = "backup-agent"
+version = "0.1.0"
+description = "A simple agent to backup podman containers with borg."
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+    { name = "i-cant-computer" },
+]
+dependencies = [
+    "pid>=3.0.4",
+    "pyyaml>=6.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/i-cant-computer/backup-agent"
+
+[tool.docformatter]
+
+recursive = true
+wrap-summaries = 88
+wrap-descriptions = 88
+
+[tool.ruff]
+
+line-length = 88
+indent-width = 2
+exclude = []
+
+[tool.ruff.format]
+
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+
+select = ["ALL"]
+ignore = [
+    "COM812",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D203",
+    "D213",
+    "E501",
+    "ERA001",
+    "F401",
+    "ISC001",
+    "INP001",
+    "RET504",
+    "T201",
+]

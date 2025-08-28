@@ -1,0 +1,32 @@
+# Backup configuration file for prawntoast."""
+
+# Account running podman containers
+podman_user: "service_account"
+
+# List of named volumes exported for the backup
+export_volumes:
+  - "volume1"
+  - "volume2"
+
+# List of containers that need to be stopped for the export
+export_containers:
+  - "container1"
+  - "container2"
+
+# Path where volumes are exported
+export_path: "/path/to/volume/exports"
+
+# Backup policy
+keep_daily: 7
+keep_weekly: 4
+keep_monthly: 3
+keep_quarterly: 3
+
+# Path to borg repository
+borg_repository: "/path/to/borg/repository"
+# Password for borg repository
+borg_password: "passphrase_set_during_borg_init"
+# Paths included in borg backups
+borg_backup_paths:
+  - "/path/to/volume/exports"
+  - "/path/to/other/backup/files"
